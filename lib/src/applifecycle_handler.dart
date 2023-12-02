@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
-class ApplifecycleHandler extends StatefulWidget {
-  const ApplifecycleHandler({
+class AppLifecycleHandler extends StatefulWidget {
+  const AppLifecycleHandler({
     super.key,
     required this.child,
     this.binding,
@@ -106,10 +106,10 @@ class ApplifecycleHandler extends StatefulWidget {
   final VoidCallback? onDetach;
 
   @override
-  State<ApplifecycleHandler> createState() => _ApplifecycleHandlerState();
+  State<AppLifecycleHandler> createState() => _AppLifecycleHandlerState();
 }
 
-class _ApplifecycleHandlerState extends State<ApplifecycleHandler> {
+class _AppLifecycleHandlerState extends State<AppLifecycleHandler> {
   AppLifecycleListener ?_listener;
 
   @override
@@ -119,7 +119,7 @@ class _ApplifecycleHandlerState extends State<ApplifecycleHandler> {
   }
 
   @override
-  void didUpdateWidget(ApplifecycleHandler oldWidget) {
+  void didUpdateWidget(AppLifecycleHandler oldWidget) {
     super.didUpdateWidget(oldWidget);
     _unsubscribe();
     _subscribe();
